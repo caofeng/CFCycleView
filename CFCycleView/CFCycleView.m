@@ -20,6 +20,7 @@
 @property (nonatomic, assign) CGFloat   currentOffset_X;
 @property (nonatomic, assign) BOOL      remoteImage;
 @property (nonatomic, copy) NSString    *placeholderImage;
+@property (nonatomic, strong) UIPageControl *pageControl;
 
 
 @end
@@ -29,7 +30,7 @@
 - (void)setLocationImageArray:(NSArray *)imageArray {
     
     self.count = imageArray.count+2;
-    
+    self.pageControl.numberOfPages = imageArray.count;
     self.scrollView.contentSize = CGSizeMake(self.cycleViewFrame.size.width * (self.count), self.cycleViewFrame.size.height);
     
     for (UIView *view in self.scrollView.subviews) {
@@ -77,8 +78,11 @@
     
     if (self.currentOffset_X > self.scrollView.contentSize.width - self.cycleViewFrame.size.width || self.currentOffset_X ==0) {
         [self.scrollView setContentOffset:CGPointMake(self.cycleViewFrame.size.width, 0)];
+        self.pageControl.currentPage = 0;
+
     } else {
         [self.scrollView setContentOffset:CGPointMake(self.currentOffset_X, 0)];
+        self.pageControl.currentPage = (int)((self.currentOffset_X-self.cycleViewFrame.size.width)/self.cycleViewFrame.size.width);
     }
 }
 
@@ -106,6 +110,15 @@
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.delegate = self;
     [self addSubview:self.scrollView];
+    
+    
+    self.pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, self.cycleViewFrame.size.height-25, self.cycleViewFrame.size.width, 20)];
+    self.pageControl.hidesForSinglePage = YES;
+    self.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
+    self.pageControl.pageIndicatorTintColor = [UIColor grayColor];
+    [self addSubview:self.pageControl];
+        
+    
     [self openTimer];
 }
 
@@ -114,10 +127,14 @@
     self.currentOffset_X = self.scrollView.contentOffset.x;
     if (self.currentOffset_X >= self.cycleViewFrame.size.width * (self.count-1)) {
         [self.scrollView setContentOffset:CGPointMake(self.cycleViewFrame.size.width, 0)];
+        self.pageControl.currentPage = 0;
         self.currentOffset_X = self.scrollView.contentOffset.x;
     } else if (self.currentOffset_X <= 0) {
         [self.scrollView setContentOffset:CGPointMake(self.cycleViewFrame.size.width * (self.count-2), 0)];
         self.currentOffset_X = self.scrollView.contentOffset.x;
+        self.pageControl.currentPage = self.count-2;
+    } else {
+        self.pageControl.currentPage = (int)((self.currentOffset_X-self.cycleViewFrame.size.width)/self.cycleViewFrame.size.width);
     }
 }
 
