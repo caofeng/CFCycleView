@@ -1,5 +1,6 @@
 # CFCycleView
 一个非常好用的无限轮播控件
+
 使用非常简单：
 
 CFCycleView *cycleView = [[CFCycleView alloc]initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 200)];
