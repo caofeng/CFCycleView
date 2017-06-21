@@ -19,6 +19,7 @@
     [super viewDidLoad];
    
     CFCycleView *cycleView = [[CFCycleView alloc]initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 200)];
+    
     [self.view addSubview:cycleView];
     
     
