@@ -93,7 +93,6 @@
     [self setLocationImageArray:imageArray];
 }
 
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {

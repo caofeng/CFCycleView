@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186502901F4EBE3F005D3316 /* CFCycleView_.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865028F1F4EBE3F005D3316 /* CFCycleView_.m */; };
 		18EA9A3C1EFA30BF00AD4FEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA9A3B1EFA30BF00AD4FEA /* main.m */; };
 		18EA9A3F1EFA30BF00AD4FEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA9A3E1EFA30BF00AD4FEA /* AppDelegate.m */; };
 		18EA9A421EFA30C000AD4FEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA9A411EFA30C000AD4FEA /* ViewController.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1865028E1F4EBE3F005D3316 /* CFCycleView_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFCycleView_.h; sourceTree = "<group>"; };
+		1865028F1F4EBE3F005D3316 /* CFCycleView_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFCycleView_.m; sourceTree = "<group>"; };
 		18EA9A371EFA30BF00AD4FEA /* CFCycleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFCycleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EA9A3B1EFA30BF00AD4FEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18EA9A3D1EFA30BF00AD4FEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				18EA9A7D1EFA400D00AD4FEA /* banner_2_default@3x.png */,
 				18EA9A6E1EFA30F200AD4FEA /* CFCycleView.h */,
 				18EA9A6F1EFA30F200AD4FEA /* CFCycleView.m */,
+				1865028E1F4EBE3F005D3316 /* CFCycleView_.h */,
+				1865028F1F4EBE3F005D3316 /* CFCycleView_.m */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 			files = (
 				18EA9A701EFA30F200AD4FEA /* CFCycleView.m in Sources */,
 				18EA9A421EFA30C000AD4FEA /* ViewController.m in Sources */,
+				186502901F4EBE3F005D3316 /* CFCycleView_.m in Sources */,
 				18EA9A3F1EFA30BF00AD4FEA /* AppDelegate.m in Sources */,
 				18EA9A3C1EFA30BF00AD4FEA /* main.m in Sources */,
 			);

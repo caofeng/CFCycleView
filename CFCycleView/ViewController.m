@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CFCycleView.h"
+#import "CFCycleView_.h"//循环之二
 
 @interface ViewController ()
 
@@ -18,13 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    CFCycleView *cycleView = [[CFCycleView alloc]initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 200)];
-    
-    [self.view addSubview:cycleView];
-    
-    
-    //设置本地图片
-    [cycleView setLocationImageArray:@[@"1.jpg",@"2.jpg",@"3.jpg",@"4.jpg",@"5.jpg"]];
+//    CFCycleView *cycleView = [[CFCycleView alloc]initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 200)];
+//
+//    [self.view addSubview:cycleView];
+//
+//
+//    //设置本地图片
+//    [cycleView setLocationImageArray:@[@"1.jpg",@"2.jpg",@"3.jpg",@"4.jpg",@"5.jpg"]];
 
     //设置网络图片
 //    [cycleView setRemoteImageArray:@[
@@ -34,10 +35,23 @@
 //                                     ] placeholderImage:@"banner_2_default"];
     
     
-    cycleView.selectedImageIndex = ^(NSInteger index) {
-        
-        NSLog(@"====%ld",index);
-    };
+//    cycleView.selectedImageIndex = ^(NSInteger index) {
+//
+//        NSLog(@"====%ld",index);
+//    };
+    
+    
+    
+    //循环之二
+    
+    CFCycleView_ *cycleView_ = [[CFCycleView_ alloc]initWithFrame:CGRectMake(0, 350, [UIScreen mainScreen].bounds.size.width, 200)];
+    
+    [self.view addSubview:cycleView_];
+    
+    
+    
+    
+    
     
 }
 
